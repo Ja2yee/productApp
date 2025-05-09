@@ -13,7 +13,7 @@
         </div>
         <div v-if="isDropDownVisible">
 
-            <div v-for="item, index in countries" :key="index" :value="item" @click="toggleOption(item)"
+            <div v-for="item, index in options" :key="index" :value="item" @click="toggleOption(item)"
                 class="flex border border-gray-300 rounded p-2 w-auto hover: cursor-pointer">
                 {{ item }}
 
@@ -28,8 +28,8 @@
 
 
 const props = defineProps({
-    countryName: '',
-    countries: {
+    name: '',
+    options: {
         type: Array,
         required: true
     }
@@ -40,10 +40,10 @@ const isDropDownVisible = ref(false)
 const dropDownIcon = ref(true)
 
 
-const name = ref(props.countryName)
+const name = ref(props.name)
 
-const toggleOption = (countries) => {
-    name.value = countries
+const toggleOption = (options) => {
+    name.value = options
     isDropDownVisible.value = false
     dropDownIcon = false
 }

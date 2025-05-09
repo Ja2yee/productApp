@@ -13,8 +13,10 @@
                     <input v-model="phoneNumber" type="tel" placeholder="Phone number" required="true"
                         class="flex-1 px-4 outline-none" />
                 </div>
+                <CustomDropDown :name="selectCounty" , :options="countryName" />
+
                 <input v-model="password" type="password" placeholder="Password" required="true"
-                    class="w-full border p-2 mb-4 rounded" />
+                    class="w-full border p-2 my-4 rounded" />
                 <button type="submit" class="bg-green-500 text-white w-full py-2 rounded">Register</button>
                 <p class="text-sm mt-4">
                     Already have an account?
@@ -29,6 +31,9 @@
 import { ref } from 'vue'
 import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
+
+const selectCounty = ref('Select country from the list')
+const countryName = ['pakistan', 'india', 'sirilanka']
 
 const fullName = ref('')
 const email = ref('')

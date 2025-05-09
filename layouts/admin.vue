@@ -6,7 +6,7 @@
         </div>
         <div>
             <!-- <CustomDropDown /> -->
-            <CustomDropDown :countryName="selectCounty" , :countries="countryName" />
+            <CustomDropDown :name="selectCounty" , :options="countryName" />
         </div>
     </div>
 </template>

@@ -6,6 +6,7 @@
                 <input v-model="email" placeholder="Email" required="true" class="w-full border p-2 mb-4 rounded" />
                 <input v-model="password" type="password" placeholder="Password" required="true"
                     class="w-full border p-2 mb-4 rounded" />
+
                 <button type="submit" class="bg-blue-500 text-white w-full py-2 rounded">Login</button>
                 <p class="text-red-500 mt-2" v-if="errorMessage">{{ errorMessage }}</p>
                 <p class="text-sm mt-4">Don't have an account?
